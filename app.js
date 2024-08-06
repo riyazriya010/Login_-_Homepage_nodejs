@@ -3,6 +3,7 @@ const session = require('express-session')
 const path = require('path')
 
 const PORT = 3009;
+
 //custom module
 const data = require('./data.js')
 
@@ -10,13 +11,9 @@ const app = express()
 
 const credentails = require('./credentails')
 
-// const session = require('express-session')
-
 app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname,'public')))
-
-// const credentails = {username:'admin',password:'admin@123'}
 
 app.use(express.json())
 app.use(express.urlencoded({'extended':true}))
